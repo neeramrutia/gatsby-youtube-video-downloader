@@ -38,8 +38,9 @@ const About = () => {
                         <Link to="section-five" smooth duration={500}>
                             <Button color="yellow" rightSection={<MdOutlineArrowDownward size={16} />} radius="lg" size="md">Tell me more</Button>
                         </Link>
-
-                        <Button rightSection={<DiGithubBadge size={20}/>} variant="default" radius="lg" size="md">Github</Button>
+                        <Link to='github.com/neeramrutia'>
+                        <Button onClick={()=>{window.location.href = "https://github.com/neeramrutia"}} rightSection={<DiGithubBadge size={20}/>} variant="default" radius="lg" size="md">Github</Button>
+                        </Link>
                     </div>
 
                 </div>

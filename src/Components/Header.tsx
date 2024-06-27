@@ -8,7 +8,7 @@ const Header = () => {
     // const theme = useMantineTheme();
     const { setColorScheme } = useMantineColorScheme();
     setColorScheme("light")
-    const [opened, setOpened] = React.useState(true);
+    const [opened, setOpened] = React.useState(false);
     const title = opened ? 'Close navigation' : 'Open navigation';
 
     return (

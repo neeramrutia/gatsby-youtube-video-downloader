@@ -1,5 +1,8 @@
 import { useMantineTheme, Container, Grid, Text, Button, Group, Avatar, UnstyledButton, Anchor, Code } from '@mantine/core';
 import React from 'react';
+import {DiGithubBadge } from "react-icons/di"
+import {BsLinkedin} from "react-icons/bs"
+import { IconBrandLinkedin } from '@tabler/icons-react';
 const Footer = () => {
     const theme = useMantineTheme();
     
@@ -10,18 +13,16 @@ const Footer = () => {
                 <Grid justify="space-around">
 
                     <Grid.Col span={8}>
-                        
-                        <Text size="xl" fw={700} c="white" mb="10px">Simple Mantine template</Text>
-
-                        <Text c="white" mb="5px">
-                            You can do anything you want with this template, from portfolios to other stuff.
+                   
+                        <Group justify='center' pt={'lg'}>
+                        <DiGithubBadge onClick={()=>{window.location.href="https://github.com/neeramrutia"}} size={32} style={{backgroundColor:"greenyellow" , borderRadius:50, cursor:"pointer"}}/>
+                       </Group>
+                       <Group justify='center'>
+                       <Text pt={'lg'} size='sm' c="white">
+                        Made with 💛 by <a style={{color:"black"}} href='https://neer-amrutia.vercel.app/'>Neer Amrutia</a> | &copy; {new Date().getFullYear()}{" "}
+        Neer Amrutia. All rights reserved.
                         </Text>
-
-                        <Text c="white" mb="20px">
-                            You can find the illustrations I used on <Anchor href="https://icons8.com/">www.icons8.com</Anchor>
-                        </Text>
-
-                        <Button variant="white" color="black" onClick={() => redirectToLink('https://mantine.dev/')}>Check out Mantine</Button>
+                        </Group>
                     </Grid.Col>
 
                     <Grid.Col span={4} >

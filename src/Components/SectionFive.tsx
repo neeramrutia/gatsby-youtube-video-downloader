@@ -18,21 +18,21 @@ const SectionFive = () => {
                 <Accordion variant="contained">
                     <Accordion.Item value="item1">
                         <Accordion.Control icon={<FiCoffee size={20} color={"#fab005"} />}>
-                            Is Dennis Farina famous?
+                            Is this free?
                         </Accordion.Control>
                         <Accordion.Panel>Yes, of course.</Accordion.Panel>
                     </Accordion.Item>
 
                     <Accordion.Item value="item2">
                         <Accordion.Control icon={<FiCloudSnow size={20} color={"#fab005"} />}>
-                            Are pineapples good?
+                            Can any quality video can be downloaded?
                         </Accordion.Control>
                         <Accordion.Panel>Unfortunately no.</Accordion.Panel>
                     </Accordion.Item>
 
                     <Accordion.Item value="item3">
                         <Accordion.Control icon={<FiAnchor size={20} color={"#fab005"} />}>
-                            Do you like yellow?
+                            Is this safe?
                         </Accordion.Control>
                         <Accordion.Panel>Oh yes!</Accordion.Panel>
                     </Accordion.Item>
