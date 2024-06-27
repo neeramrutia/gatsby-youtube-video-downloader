@@ -19,7 +19,7 @@ const Footer = () => {
                        </Group>
                        <Group justify='center'>
                        <Text pt={'lg'} size='sm' c="white">
-                        Made with 💛 by <a style={{color:"black"}} href='https://neer-amrutia.vercel.app/'>Neer Amrutia</a> | &copy; {new Date().getFullYear()}{" "}
+                        Made with &#128154; by <a style={{color:"black"}} href='https://neer-amrutia.vercel.app/'>Neer Amrutia</a> | &copy; {new Date().getFullYear()}{" "}
         Neer Amrutia. All rights reserved.
                         </Text>
                         </Group>
