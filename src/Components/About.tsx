@@ -6,10 +6,10 @@ import { Link } from "react-scroll";
 import "../Styles/About.css";
 import { IconSearch, IconArrowRight } from "@tabler/icons-react";
 // import { theme } from "../theme";
-
+const isBrowser = typeof window !== "undefined"
 const About = () => {
   const theme = useMantineTheme();
-
+ 
   return (
     <section id="about">
       <Container fluid>
@@ -48,17 +48,21 @@ const About = () => {
               </Button>
             </Link>
             <Link to="github.com/neeramrutia">
-              <Button
-                onClick={() => {
-                  window.location.href = "https://github.com/neeramrutia";
-                }}
-                rightSection={<DiGithubBadge size={20} />}
-                variant="default"
-                radius="lg"
-                size="md"
-              >
-                Github
-              </Button>
+             {
+                isBrowser && (
+                    <Button
+                    // onClick={() => {
+                    //   window.location.href = "https://github.com/neeramrutia";
+                    // }}
+                    rightSection={<DiGithubBadge size={20} />}
+                    variant="default"
+                    radius="lg"
+                    size="md"
+                  >
+                    Github
+                  </Button>
+                )
+             }
             </Link>
           </div>
           <div>

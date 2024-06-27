@@ -1,6 +1,4 @@
 import React from "react";
-// import { Welcome } from "../components/Welcome/Welcome";
-// import { ColorSchemeToggle } from "../components/ColorSchemeToggle/ColorSchemeToggle";
 import { MantineProvider, TypographyStylesProvider } from "@mantine/core";
 import Footer from "../Components/Footer";
 import Header from "../Components/Header";

@@ -3,9 +3,10 @@ import { UnstyledButton, Group, Avatar } from '@mantine/core';
 import React from 'react';
 import { Link } from 'react-scroll';
 import "../Styles/Header.css"
-
+const isBrowser = typeof window !== "undefined"
 const Header = () => {
     // const theme = useMantineTheme();
+    
     const { setColorScheme } = useMantineColorScheme();
     setColorScheme("light")
     const [opened, setOpened] = React.useState(false);
@@ -86,5 +87,8 @@ const Header = () => {
 export default Header;
 
 const redirectToLink = (link: string): void => {
-    window.open(link, '_blank');
+    // if(isBrowser){
+    //     window.open(link, '_blank');
+    // }
+    
 };
