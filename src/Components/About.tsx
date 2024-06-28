@@ -5,7 +5,6 @@ import { DiGithubBadge } from "react-icons/di";
 import { Link } from "react-scroll";
 import "../Styles/About.css";
 import { IconSearch, IconArrowRight } from "@tabler/icons-react";
-// import { theme } from "../theme";
 const isBrowser = typeof window !== "undefined"
 const About = () => {
   const theme = useMantineTheme();
@@ -51,9 +50,9 @@ const About = () => {
              {
                 isBrowser && (
                     <Button
-                    // onClick={() => {
-                    //   window.location.href = "https://github.com/neeramrutia";
-                    // }}
+                    onClick={() => {
+                      window.location.href = "https://github.com/neeramrutia";
+                    }}
                     rightSection={<DiGithubBadge size={20} />}
                     variant="default"
                     radius="lg"

@@ -1,8 +1,6 @@
 import { useMantineTheme, Container, Grid, Text, Button, Group, Avatar, UnstyledButton, Anchor, Code } from '@mantine/core';
 import React from 'react';
-import {DiGithubBadge } from "react-icons/di"
-import {BsLinkedin} from "react-icons/bs"
-import { IconBrandLinkedin } from '@tabler/icons-react';
+import { DiGithubBadge } from 'react-icons/di';
 const isBrowser = typeof window !== "undefined"
 const Footer = () => {
     const theme = useMantineTheme();
@@ -16,7 +14,7 @@ const Footer = () => {
                     <Grid.Col span={8}>
                    
                         <Group justify='center' pt={'lg'}>
-                        {/* {isBrowser && (<DiGithubBadge onClick={()=>{window.location.href="https://github.com/neeramrutia"}} size={32} style={{backgroundColor:"greenyellow" , borderRadius:50, cursor:"pointer"}}/>)} */}
+                        {isBrowser && (<DiGithubBadge onClick={()=>{window.location.href="https://github.com/neeramrutia"}} size={32} style={{backgroundColor:"greenyellow" , borderRadius:50, cursor:"pointer"}}/>)}
                        </Group>
                        <Group justify='center'>
                        <Text pt={'lg'} size='sm' c="white">
@@ -51,8 +49,8 @@ const Footer = () => {
 export default Footer;
 
 const redirectToLink = (link: string): void => {
-    // if(isBrowser){
-    //     window.open(link, '_blank');
-    // }
+    if(isBrowser){
+        window.open(link, '_blank');
+    }
     
 };

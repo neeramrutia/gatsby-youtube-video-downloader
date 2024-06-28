@@ -7,8 +7,8 @@ const isBrowser = typeof window !== "undefined"
 const Header = () => {
     // const theme = useMantineTheme();
     
-    const { setColorScheme } = useMantineColorScheme();
-    setColorScheme("light")
+    // const { setColorScheme } = useMantineColorScheme();
+    // setColorScheme("light")
     const [opened, setOpened] = React.useState(false);
     const title = opened ? 'Close navigation' : 'Open navigation';
 
@@ -87,8 +87,8 @@ const Header = () => {
 export default Header;
 
 const redirectToLink = (link: string): void => {
-    // if(isBrowser){
-    //     window.open(link, '_blank');
-    // }
+    if(isBrowser){
+        window.open(link, '_blank');
+    }
     
 };
