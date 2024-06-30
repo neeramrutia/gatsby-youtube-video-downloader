@@ -1,17 +1,23 @@
 import { Text, Container, Anchor, Button, ActionIcon, rem, TextInput, useMantineTheme } from "@mantine/core";
-import React from "react";
+import React, { useState } from "react";
 import { MdOutlineArrowDownward } from "react-icons/md";
 import { DiGithubBadge } from "react-icons/di";
 import { Link } from "react-scroll";
 import "../Styles/About.css";
 import { IconSearch, IconArrowRight } from "@tabler/icons-react";
 const isBrowser = typeof window !== "undefined"
+const donload = async(link:String) =>{
+  const res = await fetch(`http://localhost:8000/api/download?link=${link}`);
+  const data = await res.json();
+  console.log(data);
+}
 const About = () => {
   const theme = useMantineTheme();
- 
+  const [url , setUrl] = useState("");
+  
   return (
     <section id="about">
-      <Container fluid>
+      <Container fluid mt={"xl"}>
         <div className="about-content" style={{ backgroundColor: "#fff4d5" }}>
           <div style={{ marginBottom: 15 }}>
             <Text tt={"uppercase"} fw={500} c="yellow">
@@ -64,7 +70,8 @@ const About = () => {
              }
             </Link>
           </div>
-          <div>
+          <form onSubmit={async(e)=>{e.preventDefault();await donload(url)}}>
+          <div> 
             <TextInput
               pt={"lg"}
               radius="md"
@@ -77,12 +84,15 @@ const About = () => {
                   stroke={1.5}
                 />
               }
+              onSubmit={async()=>{await donload(url)}}
+              onChange={(e)=>{setUrl(e.target.value)}}
               rightSection={
                 <ActionIcon
                   size={32}
                   radius="xl"
                   color={theme.colors.yellow[4]}
                   variant="filled"
+                  onClick={async()=>{await donload(url)}}
                 >
                   <IconArrowRight
                     style={{ width: rem(18), height: rem(18) }}
@@ -92,6 +102,7 @@ const About = () => {
               }
             />
           </div>
+          </form>
         </div>
       </Container>
     </section>

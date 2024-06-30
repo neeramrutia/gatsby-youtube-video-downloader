@@ -1,19 +1,15 @@
-import { Button, Badge, Burger, Drawer, Code, Title, Anchor, Text, useMantineColorScheme } from '@mantine/core';
+import { Button, Badge, Burger, Drawer, Code, Anchor, Text } from '@mantine/core';
 import { UnstyledButton, Group, Avatar } from '@mantine/core';
 import React from 'react';
 import { Link } from 'react-scroll';
 import "../Styles/Header.css"
 const isBrowser = typeof window !== "undefined"
 const Header = () => {
-    // const theme = useMantineTheme();
-    
-    // const { setColorScheme } = useMantineColorScheme();
-    // setColorScheme("light")
     const [opened, setOpened] = React.useState(false);
     const title = opened ? 'Close navigation' : 'Open navigation';
 
     return (
-        <header>
+        <header style={{marginBottom:15}}>
             <div className="content-desktop">
                 <div>
                     <Badge size="lg" radius={10} color="yellow">A simple Mantine template</Badge>
@@ -80,7 +76,7 @@ const Header = () => {
                     </div>
                 </Drawer>
             </div>
-        </header>
+        </header >
     );
 };
 
