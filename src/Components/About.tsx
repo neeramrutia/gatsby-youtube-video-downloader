@@ -26,7 +26,7 @@ const About = () => {
   const icon = <IconInfoCircle />;
   const donload = async (link: String) => {
     const data = await axios.get(
-      `http://localhost:8000/api/download?link=${link}`
+      `https://youtube-video-downloader-brown.vercel.app/api/download?link=${link}`
     );
     setData(data);
     setUrl("");
